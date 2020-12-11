@@ -27,7 +27,7 @@
 <br><br>
 
 
-{# primary buttons #}
+{# Call to action buttons #}
 <h2>Call to action buttons</h2>
 {# What #}
 <h3>What does it do?</h3>
@@ -40,6 +40,7 @@
 <ul>
   <li>When you need a strong visual indicator to help user to complete their journey and do their task.</li>
   <li>When you need action oriented button. Think: 'Done', 'Save', 'Next', 'Submit'.</li>
+  <li>Use the Dark background variant when a Call to action button will be used against a background with a dark colour, such as primary purple.</li>
 </ul>
 {# When not #}
 <h3>When not to use it?</h3>
@@ -48,32 +49,53 @@
   <li>When a button is a destructive action.</li>
   <li>When a button starts a process or journey.</li>
 </ul>
-{%- from "wmnds/components/button/_button.njk" import wmnButton as cta %}
+{%- from "wmnds/components/button/_button.njk" import wmndsButton as cta %}
+{{
+  compExample(
+    [
+      cta({
+        text: "Call to action button"
+      }),
+      cta({
+        classNames: "wmnds-is--active",
+        text: "Call to action active button"
+      }),
+      cta({
+        text: "Call to action disabled button",
+        disabled: true
+      }),
+      cta({
+        text: "Call to action icon button",
+        iconRight: "general-chevron-right"
+      }),
+      cta({
+        text: "Call to action loading button",
+        loading: true
+      }),
+      cta({
+        text: "Call to action icon disabled button",
+        iconRight: "general-chevron-right",
+        disabled: true
+      })
+    ],
+    {
+      componentPath: "wmnds/components/button/",
+      njk: true
+    }
+  )
+}}
+
+{# Dark background variant #}
+<h3>Dark background variant</h3>
 {{
   compExample([
     cta({
-      text: "Call to action button"
-    }),
-     cta({
-      classNames: "wmnds-is--active",
-      text: "Call to action active button"
+      classNames: "wmnds-btn--dark-bg",
+      text: "Call to action dark bg button"
     }),
     cta({
-      text: "Call to action disabled button",
-      disabled: true
-    }),
-    cta({
-      text: "Call to action icon button",
-      iconRight: "general-chevron-right"
-    }),
-    cta({
-      text: "Call to action loading button",
-      loading: true
-    }),
-    cta({
-      text: "Call to action icon disabled button",
-      iconRight: "general-chevron-right",
-      disabled: true
+      classNames: "wmnds-btn--dark-bg wmnds-is--active",
+      text: "Call to action dark bg active button"
     })
   ])
 }}
@@ -102,7 +124,7 @@
   <li>When a button starts a process or journey</li>
 </ul>
 
-{%- from "wmnds/components/button/_button.njk" import wmnButton as primary -%}
+{%- from "wmnds/components/button/_button.njk" import wmndsButton as primary -%}
 {{
   compExample([
     primary({
@@ -150,6 +172,7 @@
   <li>To indicate lower priority than call to action and primary button.</li>
   <li>To create a clear hierarchy of priority and importance of actions.</li>
   <li>When a button is inessential for continuing the user journey.</li>
+  <li>Use the Dark background variant when a Secondary button will be used against a background with a dark colour, such as primary purple.</li>
 </ul>
 {# When not #}
 <h3>When not to use it?</h3>
@@ -160,7 +183,7 @@
   <li>When a button starts a process or journey</li>
 </ul>
 
-{%- from "wmnds/components/button/_button.njk" import wmnButton as secondary -%}
+{%- from "wmnds/components/button/_button.njk" import wmndsButton as secondary -%}
 {{
   compExample([
     secondary({
@@ -189,6 +212,20 @@
     })
   ])
 }}
+{# Dark background variant #}
+<h3>Dark background variant</h3>
+{{
+  compExample([
+    secondary({
+      classNames: "wmnds-btn--secondary wmnds-btn--dark-bg",
+      text: "Secondary dark bg button"
+    }),
+    secondary({
+      classNames: "wmnds-btn--secondary wmnds-btn--dark-bg wmnds-is--active",
+      text: "Secondary dark bg active button"
+    })
+  ])
+}}
 {# end: secondary buttons #}
 <br><br>
 
@@ -213,7 +250,7 @@
   <li>When a button is trying to attract the user's attention</li>
 </ul>
 
-{%- from "wmnds/components/button/_button.njk" import wmnButton as destructive -%}
+{%- from "wmnds/components/button/_button.njk" import wmndsButton as destructive -%}
 {{
   compExample([
     destructive({
@@ -266,7 +303,7 @@
   <li>When the button is inessential for continuing the user journey</li>
 </ul>
 
-{%- from "wmnds/components/button/_button.njk" import wmnButton as start -%}
+{%- from "wmnds/components/button/_button.njk" import wmndsButton as start -%}
 {{
   compExample([
     start({
@@ -319,7 +356,7 @@
   <li>When a button is a destructive action</li>
   <li>When a button starts a process or journey</li>
 </ul>
-{%- from "wmnds/components/button/_button.njk" import wmnButton as mode -%}
+{%- from "wmnds/components/button/_button.njk" import wmndsButton as mode -%}
 {{
   compExample([
     mode({

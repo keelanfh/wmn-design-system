@@ -4,7 +4,7 @@
   {% include "www/_partials/_head.njk" %}
   <!-- end: Head -->
 
-  <body>
+  <body class="wmnds-body">
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -14,55 +14,37 @@
     <![endif]-->
 
     {# header #}
-    {% from "wmnds/patterns/header/_header.njk" import wmndsHeader %}
+    {% from "wmnds/patterns/header-v2/_header-v2.njk" import wmndsHeaderV2 %}
     {{
-      wmndsHeader ({
-        navItems: navItems
+      wmndsHeaderV2 ({
+        id: "mega-menu",
+        navItems: navItems,
+        banner: true,
+        linkTopLevel: true,
+        breadcrumbs: {
+          section: section,
+          pageTitle: pageTitle
+        }
       })
     }}
     {# header #}
 
-    {# beta banner #}
-    <div class="wmnds-container">
-      {% from "wmnds/patterns/banner/_banner.njk" import wmndsBanner %}
-      {{
-        wmndsBanner ({
-          link: 'https://github.com/wmcadigital/wmn-design-system/issues',
-          linkTitle: 'WMN Design System Github'
-        })
-      }}
-    </div>
-    {# beta banner #}
-
-    {# Breadcrumb #}
-    {# Don't display breadcrumb on homepage #}
-    {% if section != 'Home' %}
-      <div class="wmnds-container">
-        {% from "wmnds/components/breadcrumb/_breadcrumb.njk" import wmndsBreadcrumb %}
-        {{
-            wmndsBreadcrumb({
-              section: section,
-              pageTitle: pageTitle
-            })
-        }}
-      </div>
-    {% endif %}
-    {# Breadcrumb #}
-
+    {# main #}
     <main class="wmnds-container wmnds-container--main">
       {% block body %}{% endblock %}
     </main>
-
-    {# Feedback #}
-    {% from "wmnds/patterns/feedback-loop/_feedback-loop.njk" import wmndsFeedbackLoop %}
-    {{
-      wmndsFeedbackLoop()
-    }}
+    {# main #}
 
     <!-- footer -->
     {% from "wmnds/patterns/footer/_footer.njk" import wmndsFooter %}
     {{
-      wmndsFooter()
+      wmndsFooter({
+        feedback: true,
+        bottomMenu: [{
+          name: "Privacy & Cookies Policy",
+          link: "https://www.wmnetwork.co.uk/privacy-cookies-policy/"
+        }]
+      })
     }}
     <!-- footer -->
 

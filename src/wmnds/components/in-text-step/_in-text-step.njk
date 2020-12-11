@@ -1,0 +1,9 @@
+{% macro wmndsInTextStep(params) %}
+
+<ol class="wmnds-in-text-step">
+    {%- for step in params.steps %}
+    <li class="wmnds-in-text-step__item">{{step}}</li>
+    {%- endfor %}
+</ol>
+
+{% endmacro %}

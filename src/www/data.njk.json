@@ -4,13 +4,25 @@
       "name": "Styles",
       "subnavItems": [
         {
+          "name": "A to Z content style guide"
+        },
+        {
           "name": "Colour palettes"
         },
         {
-          "name": "Typography"
+          "name": "Icons"
         },
         {
-          "name": "Icons"
+          "name": "Images"
+        },
+        {
+          "name": "Layout"
+        },
+        {
+          "name": "Maps"
+        },
+        {
+          "name": "Typography"
         },
         {
           "name": "Utility classes"
@@ -30,16 +42,34 @@
           "name": "Buttons"
         },
         {
-          "name": "Content Tiles"
+          "name": "Content card"
+        },
+        {
+          "name": "Content tiles"
+        },
+        {
+          "name": "Details"
         },
         {
           "name": "Disruption indicators"
         },
         {
+          "name": "File download"
+        },
+        {
           "name": "Form elements"
         },
         {
+          "name": "Inset text"
+        },
+        {
+          "name": "In-text step"
+        },
+        {
           "name": "Links"
+        },
+        {
+          "name": "Lists"
         },
         {
           "name": "Loader"
@@ -49,6 +79,12 @@
         },
         {
           "name": "Phase indicator"
+        },
+        {
+          "name": "Table"
+        },
+        {
+          "name": "Warning text"
         }
       ]
     },
@@ -62,13 +98,28 @@
           "name": "Banner"
         },
         {
+          "name": "Cookies"
+        },
+        {
+          "name": "Contact details"
+        },
+        {
+          "name": "Content cards"
+        },
+        {
           "name": "Feedback loop"
         },
         {
           "name": "Header and footer"
         },
         {
-          "name": "Progress indicator"
+          "name": "Header v2"
+        },
+        {
+          "name": "Question form"
+        },
+        {
+          "name": "Search"
         }
       ]
     },
@@ -79,7 +130,7 @@
   "colors": {
     "brand": [
       { "varName": "primary", "name": "Primary Purple" },
-      { "varName": "secondary", "name": "Seconday Purple" }
+      { "varName": "secondary", "name": "Secondary Purple" }
     ],
     "modal": [
       { "varName": "bus", "name": "Bus" },

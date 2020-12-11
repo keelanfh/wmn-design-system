@@ -1,0 +1,11 @@
+{% macro wmndsInsetText(params) %}
+
+{# Set #}
+{% set html = params.html if params.html else "Type something" %} {# set content #}
+{% set label = params.label if params.label else "" %} {# set content #}
+
+<div class="wmnds-inset-text" {% if params.label %} aria-label="{{ label }}" {% endif %}>
+    {{html | safe }}
+</div>
+
+{% endmacro %}
